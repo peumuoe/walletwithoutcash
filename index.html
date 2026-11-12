@@ -20,28 +20,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 html{background:var(--green)}
 body{font-family:Pretendard,sans-serif;color:var(--ink);letter-spacing:-0.03em;word-break:keep-all;-webkit-font-smoothing:antialiased;
   background:radial-gradient(120% 60% at 50% 22%, #1FA65A 0%, var(--green2) 40%, var(--green) 78%) no-repeat, var(--green);min-height:100vh}
-.wrap{max-width:480px;margin:0 auto;padding-bottom:28px}
+.wrap{max-width:480px;margin:0 auto}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-/* 광고와 같은 첫 화면: 광고 포스터를 그대로 보여 줌 */
-.hero{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 90%,transparent);mask-image:linear-gradient(to bottom,#000 90%,transparent)}
-.disc{display:table;margin:-4px auto 0;padding:5px 12px 4px;border-radius:999px;background:rgba(11,39,22,.6);color:#fff;font-size:12px;font-weight:600;line-height:1.4;text-align:center}
-.cta{display:block;margin:12px 20px 0;padding:17px 16px 15px;border-radius:14px;background:var(--hl);color:var(--ink);text-align:center;font-size:18px;font-weight:800;text-decoration:none;
-  box-shadow:0 5px 0 rgba(11,39,22,.45)}
+/* 첫 화면 = 광고 포스터. 버튼 묶음을 포스터의 흐려지는 아래쪽에 겹쳐 올려 한 덩어리로 */
+.hero{display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 86%,transparent);mask-image:linear-gradient(to bottom,#000 86%,transparent)}
+.act{position:relative;margin-top:-14px;padding:0 20px}
+.disc{display:table;margin:0 auto;padding:5px 12px 4px;border-radius:999px;background:rgba(11,39,22,.62);color:#fff;font-size:12px;font-weight:600;line-height:1.4;text-align:center}
+.cta{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:10px;padding:17px 16px 15px;border-radius:14px;background:var(--hl);color:var(--ink);font-size:18px;font-weight:800;text-decoration:none;box-shadow:0 5px 0 rgba(11,39,22,.45)}
 .cta:active{transform:translateY(3px);box-shadow:0 2px 0 rgba(11,39,22,.45)}
-/* 후기: 광고의 흰 후기 카드와 같은 모양 */
-.review{margin:28px 20px 0;padding:22px 20px 20px;border-radius:20px;background:#fff;box-shadow:0 10px 24px rgba(0,30,10,.25)}
-.review h2{font-size:20px;font-weight:800;line-height:1.35}
+.cta svg{width:18px;height:18px}
+.go{margin-top:9px;font-size:13px;color:rgba(255,255,255,.9);text-align:center;line-height:1.45}
+/* 후기: 광고의 흰 후기 카드와 같은 모양, 짧게 */
+.review{margin:20px 20px 0;padding:18px 18px 16px;border-radius:18px;background:#fff;box-shadow:0 10px 24px rgba(0,30,10,.25)}
+.review h2{font-size:19px;font-weight:800;line-height:1.35}
 .review h2 mark{background:linear-gradient(transparent 55%, var(--hl) 55%);color:inherit;padding:0 2px}
-.review .by{margin-top:6px;font-size:13px;color:var(--sub)}
-.review dl{margin-top:16px;display:grid;gap:14px}
+.review .by{margin-top:4px;font-size:13px;color:var(--sub)}
+.review dl{margin-top:12px;display:grid;gap:10px}
 .review dt{font-size:13px;font-weight:800;color:var(--acc)}
-.review dd{margin-top:3px;font-size:15px;line-height:1.55;color:#1F2937}
-.review .quote{margin-top:18px;padding:14px 14px 12px;border-radius:12px;background:var(--soft);font-size:16px;font-weight:700;line-height:1.45;text-align:center}
-.review .quote b{color:var(--acc)}
-.cta.bottom{margin-top:18px}
-footer{max-width:480px;margin:0 auto;padding:18px 24px 40px}
-footer p{font-size:12px;color:rgba(255,255,255,.78);line-height:1.5;text-align:center}
-footer p+p{margin-top:4px}
+.review dd{margin-top:2px;font-size:15px;line-height:1.5;color:#1F2937}
+footer{max-width:480px;margin:0 auto;padding:14px 24px 18px}
+footer p{font-size:12px;color:rgba(255,255,255,.75);line-height:1.5;text-align:center}
+.more{display:flex;align-items:center;justify-content:center;gap:4px;margin-top:14px;padding:12px 14px 11px;border-radius:12px;border:1.5px solid var(--acc);color:var(--acc);background:#fff;font-size:15px;font-weight:700;text-decoration:none}
+.more svg{width:15px;height:15px}
 </style>
 </head>
 <body>
@@ -51,10 +51,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <main class="wrap">
   <h1 class="sr">3년째 신발장에 두는 발냄새템: 오더이터 풋 파우더 3년 사용 후기</h1>
-  <img class="hero" src="hero_ad.jpg" width="1080" height="1132" alt="3년째 신발장에 두는 발냄새템. 발에 쓰는 풋 파우더, 오더이터 풋 파우더 병과 흰 가루">
-  <p class="disc">쿠팡 파트너스 제휴 링크로 구매 시 수수료를 받습니다</p>
-  <a class="cta top" id="cta-powder-top" href="https://link.coupang.com/a/ixxLH4GTvw" target="_blank" rel="noopener sponsored">쿠팡에서 보기</a>
-
+  <img class="hero" src="hero_ad.jpg" width="1080" height="1132" fetchpriority="high" alt="3년째 신발장에 두는 발냄새템. 발에 쓰는 풋 파우더, 오더이터 풋 파우더 병과 흰 가루">
+  <div class="act">
+    <p class="disc">쿠팡 파트너스 제휴 링크로 구매 시 수수료를 받습니다</p>
+    <a class="cta" id="cta-powder-top" href="https://link.coupang.com/a/ixxLH4GTvw" target="_blank" rel="noopener sponsored">쿠팡에서 가격 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    <p class="go">배송비·도착 예정일도 상품 페이지에서 확인할 수 있어요</p>
+  </div>
   <section class="review" aria-labelledby="rv">
     <h2 id="rv">땀 많은 발로 <mark>3년 써 본</mark> 솔직 후기</h2>
     <p class="by">오더이터 풋 파우더 · 직접 사서 쓰는 사용자</p>
@@ -63,14 +65,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div><dt>3년째 쓰는 이유</dt><dd>제 경우엔 냄새가 확 잡히고, 발이 뽀송하게 유지됐어요. 땀 때문에 냄새가 나는 저한테는 이게 제일 잘 맞았어요.</dd></div>
       <div><dt>아쉬운 점</dt><dd>뿌릴 때 가루가 흩날려요.</dd></div>
     </dl>
-    <p class="quote">“제 경우엔 <b>냄새가 확 잡히고</b> 뽀송했어요”</p>
+    <a class="more" id="cta-powder" href="https://link.coupang.com/a/ixxLH4GTvw" target="_blank" rel="noopener sponsored">쿠팡에서 가격 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
   </section>
-
-  <a class="cta bottom" id="cta-powder" href="https://link.coupang.com/a/ixxLH4GTvw" target="_blank" rel="noopener sponsored">쿠팡에서 보기</a>
 </main>
 <footer>
-  <p>제 개인적인 사용 경험이에요. 느끼는 효과는 사람마다 다를 수 있어요.</p>
-  <p>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
+  <p>제 개인적인 사용 경험이에요. 느끼는 효과는 사람마다 다를 수 있어요.<br>이 포스팅은 쿠팡 파트너스 활동의 일환으로, 이에 따른 일정액의 수수료를 제공받습니다.</p>
 </footer>
 </body>
 </html>
